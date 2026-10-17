@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# Defaults for every geolens-io repository without its own .coderabbit.yaml.
+# Review rules come from each repository's AGENTS.md, which CodeRabbit reads.
+reviews:
+  profile: chill
+  # PR descriptions stay as their authors wrote them.
+  high_level_summary_in_walkthrough: true
+  in_progress_fortune: false
+  sequence_diagrams: false
+  suggested_reviewers: false
+  auto_review:
+    ignore_usernames:
+      - dependabot[bot]
+  path_filters:
+    - "!frontend/src/types/api.generated.ts"
+    - "!backend/openapi.json"
+    - "!sdks/python/geolens/api/**"
+    - "!sdks/python/geolens/models/**"
+    - "!sdks/typescript/src/client/**"
+    - "!**/uv.lock"
+    - "!**/package-lock.json"
+chat:
+  art: false
+  # Public repositories: only org members can drive the bot.
+  allow_non_org_members: false
